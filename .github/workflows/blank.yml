@@ -18,7 +18,7 @@ jobs:
           echo "Hello, world!" > artifact.txt  # Create a simple text file
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2  # Use the updated upload-artifact action (v2)
+        uses: github/upload-artifact@v3  # Use the updated github/upload-artifact action
         with:
           name: my-artifact  # Artifact name
           path: artifact.txt  # Path to the file you want to upload
