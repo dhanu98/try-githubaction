@@ -18,7 +18,7 @@ jobs:
           echo "Hello, world!" > artifact.txt  # Create a simple text file
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2  # Use the stable v2 version of upload-artifact
+        uses: actions/upload-artifact@v4 # Use the stable v2 version of upload-artifact
         with:
           name: my-artifact  # Name of the artifact
           path: artifact.txt  # Path to the artifact
