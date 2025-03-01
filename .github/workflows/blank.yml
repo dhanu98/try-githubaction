@@ -3,7 +3,7 @@ name: Upload Artifact Example
 on:
   push:
     branches:
-      - main  # Run on push to the main branch
+      - main  # Trigger on push to main branch
 
 jobs:
   build:
@@ -11,14 +11,14 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Check out the repository
+        uses: actions/checkout@v3  # Checkout the repository code
 
       - name: Create an artifact
         run: |
           echo "Hello, world!" > artifact.txt  # Create a simple text file
 
       - name: Upload artifact
-        uses: actions/upload-artifact@latest  # Use the latest supported version
+        uses: actions/upload-artifact@v2  # Use the stable v2 version of upload-artifact
         with:
-          name: my-artifact  # Artifact name
-          path: artifact.txt  # Path to the file you want to upload
+          name: my-artifact  # Name of the artifact
+          path: artifact.txt  # Path to the artifact
